@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation App Using JavaScript</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="bg-light p-3 text-center">
+        <div class="h4 font-weight-bolder">Making An Expression Validation App Using JavaScript</div>
+    </div>
+    <div class="container mt-5">
+        <!-- start form -->
+        <form>
+            <div class="form-row my-2">
+                <div class="col my-2">
+                    <select id="type" class="custom-select">
+                        <option selected disabled value="null">Choose...</option>
+                        <option value="email" class="email">E-mail</option>
+                        <option value="phoneNumber" class="php">Phone Number</option>
+                        <option value="postCode" class="">Post Code</option>
+                    </select>
+                    <div class="invalid-feedback">Please select one option</div>
+                </div>
+                <div class="col-sm-6 my-2">
+                    <input type="text" id="user-input" class="form-control" placeholder="Input here">
+                    <div class="invalid-feedback">Please provide a valid input</div>
+                </div>
+                <div class="col my-2">
+                    <button type="submit" class="btn btn-primary">Check Validation</button>
+                </div>
+            </div>
+        </form>
+        <!-- end form here -->
+    </div>
+
+    <!-- start result table -->
+    <div class="container mt-5">
+        <table class="table table-hover">
+            <caption>List of Validation</caption>
+            <thead class="thead-primary">
+                <tr>
+                    <th scope="col">Type</th>
+                    <th scope="col">Input</th>
+                    <th scope="col">Status</th>
+                </tr>
+            </thead>
+            <tbody id="result-list">
+            </tbody>
+        </table>
+    </div>
+    <!-- end result table -->
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
